@@ -1,3 +1,8 @@
-<%= link_to "< Home", '/articles', class: 'btn' %>
-<h2><%= @article.title %></h2>
+<h2><%= @article.title %></h2><%= link_to edit_article_path(@article) do%>
+    <i class="fa fa-pencil article-icons" aria-hidden="true"></i>
+  <%end%><%= link_to article_path(@article), class: 'delete',
+          method: :delete,
+          data: { confirm: "Are you sure?" } do%>
+    <i class="fa fa-trash article-icons" aria-hidden="true"></i>
+  <%end%>
 <p><%= @article.content %></p>

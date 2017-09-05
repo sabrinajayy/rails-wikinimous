@@ -8,7 +8,7 @@ body {
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -21,6 +21,16 @@ ul {
 li {
   list-style: none;
 
+}
+
+.article a {
+  font-size: 24px;
+  opacity: 0.8;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
 }
 
 .container {
@@ -45,7 +55,7 @@ padding: 20px 100px;
 }
 .flex-content a {
   color: white;
-  opacity: 0.7;
+  opacity: 0.8;
   &:hover {
     opacity: 1;
   }
@@ -53,7 +63,9 @@ padding: 20px 100px;
 
 .flex-content h1 {
   font-size: 40px;
-
+  &:hover {
+    color: white;
+  }
 }
 
 .article-name {
