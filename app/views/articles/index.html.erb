@@ -1,0 +1,21 @@
+<ul>
+<% @articles.each do |article| %>
+  <li class='article-name'>
+    <div class='article-icons'>
+      <%= article.title %> <%= link_to article_path(article) do %>
+       <i class="fa fa-eye" aria-hidden="true"></i>
+      <%end%>
+      <%= link_to edit_article_path(article) do%>
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      <%end%>
+      <%= link_to article_path(article), class: 'delete',
+          method: :delete,
+          data: { confirm: "Are you sure?" } do%>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      <%end%>
+    </div>
+    <p class='content'><%= article.content.slice(0, 200) %></p>
+  </li>
+
+<% end %>
+</ul>
